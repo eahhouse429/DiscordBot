@@ -12,7 +12,9 @@ module.exports = {
         const channelId = message.channelId;
         const channel = message.client.channels.cache.get(channelId);
 
-        if (message.content.toLowerCase().includes("testbot")) {
+        const messageContent = message.content.toLowerCase();
+
+        if (messageContent.includes("testbot")) {
             channel.send('Hello?');
         }
     },
